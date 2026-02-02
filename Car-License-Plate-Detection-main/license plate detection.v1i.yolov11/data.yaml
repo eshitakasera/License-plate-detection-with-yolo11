@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['license-plate']
+
+roboflow:
+  workspace: janet-rini-eaojj
+  project: license-plate-detection-tdv0k
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/janet-rini-eaojj/license-plate-detection-tdv0k/dataset/1
