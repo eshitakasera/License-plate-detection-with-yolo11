@@ -14,8 +14,9 @@ pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install easyocr
 python app.py
-
-### Mac/Linux:
+```
+## Mac/Linux:
+```
 git clone https://github.com/eshitakasera/License-plate-detection-with-yolo11.git
 cd License-plate-detection-with-yolo11
 python3 -m venv venv
@@ -24,7 +25,7 @@ pip install -r requirements.txt
 pip3 install torch torchvision torchaudio
 pip install easyocr
 python3 app.py
-
+```
 ## After Installation
 Open browser and go to port 5000
 
