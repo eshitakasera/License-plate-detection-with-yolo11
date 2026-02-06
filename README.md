@@ -4,8 +4,8 @@
 Real-time license plate detection and recognition system using YOLOv11 and EasyOCR. Flask web app with OpenCV video processing.
 
 ## Quick Installation
-
-### Windows:
+## Windows:
+```
 git clone https://github.com/eshitakasera/License-plate-detection-with-yolo11.git
 cd License-plate-detection-with-yolo11
 python -m venv venv
