@@ -26,7 +26,7 @@ pip install easyocr
 python3 app.py
 
 ## After Installation
-Open browser: http://localhost:5000
+Open browser and go to port 5000
 
 ## Troubleshooting
 
