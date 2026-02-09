@@ -94,7 +94,7 @@ Follow these steps to get a local copy of the project up and running on your mac
 
  1. Clone the repository
 git clone [https://github.com/eshitakasera/License-plate-detection-with-yolo11.git](https://github.com/eshitakasera/License-plate-detection-with-yolo11.git)
-cd License-plate-detection-with-yolo11
+cd Car-License-Plate-Detection-main
 
  2. Create and activate a virtual environment (Recommended)
 python -m venv venv
