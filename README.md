@@ -46,11 +46,11 @@ This system is designed for scalability in:
 * **Security Systems:** Enhanced surveillance for restricted areas.
 ```
 
-## 📂 Project Structure
+## 📂 BASIC Project Structure
 
 
 ├── Car-License-Plate-Detection-main/
-│   ├── app.py                # Flask/Streamlit Web App
+│   ├── app.py                # Streamlit Web App
 │   └── yolo11n.pt            # Fine-tuned Weights
 ├── requirements.txt          # PyTorch, OpenCV, EasyOCR, etc.
 ├── packages.txt              # libGL system dependencies
