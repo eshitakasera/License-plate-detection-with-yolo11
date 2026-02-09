@@ -56,3 +56,63 @@ This system is designed for scalability in:
 ├── requirements.txt          # PyTorch, OpenCV, EasyOCR, etc.
 ├── packages.txt              # libGL system dependencies
 └── README.md                 # Project Documentation
+
+---
+---
+
+## 🖼️ Result Analysis & Pipeline Workflow
+
+The system uses a sequential dual-stage pipeline to ensure maximum accuracy in character extraction.
+
+### 🔍 Stage 1: Plate Localization (YOLOv11)
+* **Detection**: The fine-tuned YOLOv11 model identifies the vehicle and draws a high-precision bounding box around the license plate.
+* **Visualization**: The application displays the original image alongside the "Detection Result" highlighting the localized plate.
+
+### 📝 Stage 2: Character Recognition (EasyOCR)
+* **Image Cropping**: The detected plate area is automatically cropped and pre-processed for clarity.
+* **OCR Extraction**: EasyOCR identifies alphanumeric characters and outputs the plate number (e.g., **GSTBS**).
+* **Confidence Scoring**: Each extraction includes a confidence percentage (e.g., **65.10%**) to indicate result reliability.
+
+| Process Step | Visual Output | Data Extracted |
+| :--- | :--- | :--- |
+| **Localization** | Bounding Box Overlay | Plate Coordinates |
+| **Recognition** | Cropped Plate View | Alphanumeric String |
+| **Validation** | Confidence Metric | Probability Score |
+
+
+
+> [!TIP]
+> **System Intelligence:** If a plate is too blurry or obscured, the system flags a "Could not read text" warning to prevent incorrect data capture, ensuring high data integrity for real-world use.
+
+---
+
+## 🛠️ Installation & Local Setup
+
+Follow these steps to get a local copy of the project up and running on your machine.
+
+### 📋 Prerequisites & Environment
+* **Python 3.11+**: Ensure Python is installed on your system.
+* **System Dependencies**: OpenCV requires certain libraries (like `libGL`) which are listed in `packages.txt`.
+* **Git**: To clone the repository.
+
+### ⚙️ Execution Commands
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/eshitakasera/License-plate-detection-with-yolo11.git](https://github.com/eshitakasera/License-plate-detection-with-yolo11.git)
+cd License-plate-detection-with-yolo11
+
+# 2. Create and activate a virtual environment (Recommended)
+python -m venv venv
+# For Windows:
+venv\Scripts\activate
+# For Mac/Linux:
+source venv/bin/activate
+
+# 3. Install all required Python libraries
+# This includes ultralytics, easyocr, streamlit, and opencv-python-headless
+pip install -r requirements.txt
+
+# 4. Launch the application
+# Run the streamlit app located in the main sub-folder
+streamlit run Car-License-Plate-Detection-main/app.py
