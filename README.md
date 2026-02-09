@@ -44,8 +44,7 @@ This system is designed for scalability in:
 * **Automated Toll Systems:** Seamless toll collection via high-speed plate recognition.
 * **Smart Parking:** Automated entry/exit management for residential and commercial spaces.
 * **Security Systems:** Enhanced surveillance for restricted areas.
-
----
+```
 
 ## 📂 Project Structure
 
@@ -56,7 +55,7 @@ This system is designed for scalability in:
 ├── requirements.txt          # PyTorch, OpenCV, EasyOCR, etc.
 ├── packages.txt              # libGL system dependencies
 └── README.md                 # Project Documentation
-
+```
 
 
  🖼️ Result Analysis & Pipeline Workflow
