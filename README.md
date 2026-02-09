@@ -89,16 +89,19 @@ Follow these steps to get a local copy of the project up and running on your mac
 * **Python 3.11+**: Ensure Python is installed on your system.
 * **System Dependencies**: OpenCV requires certain libraries (like `libGL`) which are listed in `packages.txt`.
 * **Git**: To clone the repository.
-
+```
 ### ⚙️ Execution Commands
 1️⃣ Local Setup & Development
 Step 1: Download & Extraction Navigate to the GitHub repository, click the Code button, and select Download ZIP. Extract the contents to a preferred directory on your local machine. Alternatively, you may use the command: git clone https://github.com/eshitakasera/License-plate-detection-with-yolo11.git.
-Step 2: Environment Configuration Open your terminal or command prompt, navigate into the project folder,initialize git,Add files,commit,Set branch,Add remote origin,push to your github from your local
+Step 2: Environment Configuration Open your terminal or command prompt, navigate into the project folder,initialize git,Add files,commit,Set branch,Add remote origin,push to your github from your local.
+```
+```
 2️⃣  Deployment (Public Access)
 Step 1: Version Control Synchronization Ensure all local changes and the fine-tuned model weights (yolo11n.pt) are Uploaded or Pushed to your GitHub repository.
 Step 2: Streamlit Integration Access , sign in with your GitHub account, and authorize access to your repository.
 Step 3: Deployment Configuration In the deployment settings, specify the Main file path as: Car-License-Plate-Detection-main/app.py
 Step 4: Application Launch Click the "Deploy" button. The platform will automatically build the environment and launch your ALPR system as a publicly accessible web application. 🚀
+```
 🚗 Car License Plate Detection & Recognition (YOLOv11 + EasyOCR)
 An end-to-end computer vision pipeline designed to detect vehicle license plates and extract alphanumeric text with high precision. This project leverages the state-of-the-art **YOLOv11** for object detection and **EasyOCR** for robust character recognition.
 
