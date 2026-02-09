@@ -19,7 +19,7 @@ if st.button("Clear System Cache"):
 @st.cache_resource
 def load_model():
     # Model path check karein
-    model_path = 'best.pt' 
+    model_path = 'yolo11n.pt' 
     model = YOLO(model_path)
     
     # FIX: Labels overwrite (Manya Singhal -> License Plate)
