@@ -49,7 +49,7 @@ This system is designed for scalability in:
 
 ## 📂 Project Structure
 ```plaintext
-.
+
 ├── Car-License-Plate-Detection-main/
 │   ├── app.py                # Flask/Streamlit Web App
 │   └── yolo11n.pt            # Fine-tuned Weights
@@ -57,8 +57,7 @@ This system is designed for scalability in:
 ├── packages.txt              # libGL system dependencies
 └── README.md                 # Project Documentation
 
----
----
+
 
 ## 🖼️ Result Analysis & Pipeline Workflow
 
@@ -83,8 +82,6 @@ The system uses a sequential dual-stage pipeline to ensure maximum accuracy in c
 
 > [!TIP]
 > **System Intelligence:** If a plate is too blurry or obscured, the system flags a "Could not read text" warning to prevent incorrect data capture, ensuring high data integrity for real-world use.
-
----
 
 ## 🛠️ Installation & Local Setup
 
