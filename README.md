@@ -46,7 +46,7 @@ This system is designed for scalability in:
 * **Security Systems:** Enhanced surveillance for restricted areas.
 ```
 
-## 📂 BASIC Project Structure
+📂 BASIC Project Structure
 
 
 ├── Car-License-Plate-Detection-main/
