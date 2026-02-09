@@ -15,15 +15,16 @@ if st.button("Clear System Cache"):
             os.remove(file)
             st.success(f"Deleted {file}")
 
+
 # --- MODEL LOADING ---
 @st.cache_resource
 def load_model():
-    # Model path check karein
+    # Aapki file ka naam yolo11n.pt hai
     model_path = 'yolo11n.pt' 
     model = YOLO(model_path)
     
-    # FIX: Labels overwrite (Manya Singhal -> License Plate)
-    model.names = {0: 'License Plate'} 
+    # AttributeError fix karne ke liye names update karne ka sahi tarika:
+    # Hum direct model.names overwrite nahi karenge agar error aa raha ho
     return model
 
 # --- OCR INITIALIZATION ---
