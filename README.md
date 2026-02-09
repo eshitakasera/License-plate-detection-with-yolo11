@@ -113,3 +113,58 @@ pip install -r requirements.txt
 # 4. Launch the application
 # Run the streamlit app located in the main sub-folder
 streamlit run Car-License-Plate-Detection-main/app.py
+# 🚗 Car License Plate Detection & Recognition (YOLOv11 + EasyOCR)
+
+An end-to-end computer vision pipeline designed to detect vehicle license plates and extract alphanumeric text with high precision. This project leverages the state-of-the-art **YOLOv11** for object detection and **EasyOCR** for robust character recognition.
+
+---
+
+## 🏗️ System Architecture & Workflow
+
+The system utilizes a two-stage sequential pipeline to ensure maximum accuracy in character extraction.
+
+
+
+### 1. Plate Localization (YOLOv11)
+* **Detection**: A fine-tuned YOLOv11 model identifies the vehicle and draws a high-precision bounding box around the license plate.
+* **Precision**: Optimised for various lighting conditions and angles.
+
+### 2. Character Recognition (EasyOCR)
+* **Preprocessing**: The detected plate area is cropped and converted to grayscale to enhance OCR accuracy.
+* **Extraction**: EasyOCR identifies alphanumeric characters (e.g., `ABC-1234`).
+* **Confidence Scoring**: Each result includes a probability score (e.g., `92.4%`) to ensure data integrity.
+
+| Process Step | Visual Output | Data Extracted |
+| :--- | :--- | :--- |
+| **Localization** | Bounding Box Overlay | Plate Coordinates |
+| **Recognition** | Cropped Plate View | Alphanumeric String |
+| **Validation** | Confidence Metric | Probability Score |
+
+---
+
+## 🛠️ Installation & Local Setup
+
+### 📋 Prerequisites
+* **Python 3.11+**
+* **System Dependencies**: `libGL` (required for OpenCV)
+* **Hardware**: GPU recommended (CUDA) but works on CPU.
+
+### ⚙️ Execution Commands
+
+```bash
+# 1. Clone the repository
+git clone [https://github.com/eshitakasera/License-plate-detection-with-yolo11.git](https://github.com/eshitakasera/License-plate-detection-with-yolo11.git)
+cd License-plate-detection-with-yolo11
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+
+# 3. Install required Python libraries
+pip install -r requirements.txt
+
+# 4. Launch the Streamlit application
+streamlit run Car-License-Plate-Detection-main/app.py
